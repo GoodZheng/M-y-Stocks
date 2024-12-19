@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStocks", "MyStocks\MyStocks.csproj", "{CC2D4182-6E66-4CC1-A153-4F6B580290B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sf", "sf", "{CB724831-FFE5-4248-BAD7-9EBF16D0EF40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.entity", "peano.mystocks.entity\peano.mystocks.entity.csproj", "{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC2D4182-6E66-4CC1-A153-4F6B580290B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2D4182-6E66-4CC1-A153-4F6B580290B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2D4182-6E66-4CC1-A153-4F6B580290B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2D4182-6E66-4CC1-A153-4F6B580290B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE} = {CB724831-FFE5-4248-BAD7-9EBF16D0EF40}
+	EndGlobalSection
+EndGlobal
