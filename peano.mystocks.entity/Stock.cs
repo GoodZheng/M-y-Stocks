@@ -6,9 +6,14 @@ namespace peano.mystocks.entity
     [SugarTable("P_Stock")]
     public class Stock
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
+        [SugarColumn(IsPrimaryKey =true)]
+        public int Code { get; set; }
+        public string Name { get; set; } = null!;
+
+        [SugarColumn(DecimalDigits =3)]
         public decimal CurrentPrice { get; set; }
+
+        [SugarColumn(DecimalDigits = 3)]
         public decimal PreviousPrice { get; set; }
         public decimal ChangeAmount { get; set; }
         public decimal ChangePercent { get; set; }
