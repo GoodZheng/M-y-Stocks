@@ -3,7 +3,7 @@ using System;
 
 namespace peano.mystocks.log.library
 {
-    public class LogService
+    public static class LogService
     {
         // 使用不同的 Logger 来分配不同的日志目标
         private static readonly Logger infoLogger = LogManager.GetLogger("loginfo");
@@ -12,23 +12,23 @@ namespace peano.mystocks.log.library
 
 
         // 日志记录方法：记录信息级别的日志
-        public static void LogInfo(string message)
+        public static void Info(string message)
         {
             LogEventInfo logEvent = LogEventInfo.Create(LogLevel.Info, null, message);
             infoLogger.Log(typeof(LogService),logEvent);
         }
 
         // 日志记录方法：记录警告级别的日志
-        public static void LogWarn(string message)
+        public static void Warn(string message)
         {
-            LogEventInfo logEvent = LogEventInfo.Create(LogLevel.Warn, "logwarn", message);
+            LogEventInfo logEvent = LogEventInfo.Create(LogLevel.Warn, null, message);
             warnLogger.Log(typeof(LogService),logEvent);
         }
 
         // 日志记录方法：记录错误级别的日志
-        public static void LogError(string message)
+        public static void Error(string message)
         {
-            NLog.LogEventInfo logEvent = NLog.LogEventInfo.Create(NLog.LogLevel.Error, "logwarn", message);
+            LogEventInfo logEvent = LogEventInfo.Create(LogLevel.Error, null, message);
             errorLogger.Log(typeof(LogService),logEvent);
         }
     }

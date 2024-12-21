@@ -22,15 +22,6 @@ namespace MyStocks
         //private static readonly NLog.Logger logger = LogHelper.lo
         public MainWindow()
         {
-            LogService.LogInfo("Main Window!");
-            LogService.LogInfo("Main Window!");
-            LogService.LogInfo("Main Window!");
-            LogService.LogWarn("warn!");
-            LogService.LogWarn("warn!");
-            LogService.LogWarn("warn!");
-            LogService.LogError("Error!");
-            LogService.LogError("Error!");
-            LogService.LogError("Error!");
             InitializeComponent();
         }
     }
