@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStocks", "MyStocks\MyStocks.csproj", "{CC2D4182-6E66-4CC1-A153-4F6B580290B1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sf", "sf", "{CB724831-FFE5-4248-BAD7-9EBF16D0EF40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.entity", "peano.mystocks.entity\peano.mystocks.entity.csproj", "{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.entity.library", "peano.mystocks.entity\peano.mystocks.entity.library.csproj", "{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.dac.library", "peano.mystocks.dac.library\peano.mystocks.dac.library.csproj", "{C8361DB8-46B9-4EFF-A913-3027EFA4248B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main", "Main", "{6258A891-FF26-4F7B-AD12-870061292474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStocks", "MyStocks\MyStocks.csproj", "{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.log.library", "peano.mystocks.log.library\peano.mystocks.log.library.csproj", "{8245EADC-6CED-49A2-886A-8A7E36915082}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,19 +21,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CC2D4182-6E66-4CC1-A153-4F6B580290B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC2D4182-6E66-4CC1-A153-4F6B580290B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC2D4182-6E66-4CC1-A153-4F6B580290B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC2D4182-6E66-4CC1-A153-4F6B580290B1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8361DB8-46B9-4EFF-A913-3027EFA4248B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8361DB8-46B9-4EFF-A913-3027EFA4248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8361DB8-46B9-4EFF-A913-3027EFA4248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8361DB8-46B9-4EFF-A913-3027EFA4248B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8245EADC-6CED-49A2-886A-8A7E36915082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8245EADC-6CED-49A2-886A-8A7E36915082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8245EADC-6CED-49A2-886A-8A7E36915082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8245EADC-6CED-49A2-886A-8A7E36915082}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE} = {CB724831-FFE5-4248-BAD7-9EBF16D0EF40}
+		{C8361DB8-46B9-4EFF-A913-3027EFA4248B} = {CB724831-FFE5-4248-BAD7-9EBF16D0EF40}
+		{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF} = {6258A891-FF26-4F7B-AD12-870061292474}
+		{8245EADC-6CED-49A2-886A-8A7E36915082} = {CB724831-FFE5-4248-BAD7-9EBF16D0EF40}
 	EndGlobalSection
 EndGlobal
