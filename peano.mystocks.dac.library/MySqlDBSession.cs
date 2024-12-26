@@ -1,4 +1,4 @@
-﻿using peano.mystocks.entity;
+﻿using peano.mystocks.entity.library;
 using SqlSugar;
 using System.Collections.Generic;
 using System.Threading.Tasks;

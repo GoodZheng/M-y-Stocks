@@ -1,4 +1,5 @@
 ﻿using Microsoft.IdentityModel.Logging;
+using MyStocks.ViewModels;
 using NLog;
 using peano.mystocks.log.library;
 using System.Text;
@@ -22,7 +23,9 @@ namespace MyStocks
         //private static readonly NLog.Logger logger = LogHelper.lo
         public MainWindow()
         {
+
             InitializeComponent();
+
         }
     }
 }

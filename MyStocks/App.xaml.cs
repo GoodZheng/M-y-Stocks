@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using MyStocks.ViewModels;
+using System.Configuration;
 using System.Data;
 using System.Windows;
 
@@ -25,6 +26,10 @@ namespace MyStocks
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // containerRegistry.Register<ISomeService, SomeService>();
+            // containerRegistry.Register<MainViewModel>(); //瞬时：每次请求都会创建一个新的实例
+
+            // 注册导航
+            containerRegistry.RegisterForNavigation<MainWindow,MainViewModel>(); 
         }
     }
 

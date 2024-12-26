@@ -1,32 +1,33 @@
 ﻿using SqlSugar;
 using System;
+using System.Runtime.Serialization;
 
-namespace peano.mystocks.entity
+namespace peano.mystocks.entity.library
 {
     [SugarTable("P_Stock")]
     public class Stock
     {
         [SugarColumn(IsPrimaryKey =true)]
-        public int Code { get; set; }
+        public string Code { get; set; } = null!;
         public string Name { get; set; } = null!;
 
         // 当前价
-        [SugarColumn(DecimalDigits =3)]
+        [IgnoreDataMember]
         public decimal CurrentPrice { get; set; }
 
 
         // 上一交易日收盘价
-        [SugarColumn(DecimalDigits = 3)]
+        [IgnoreDataMember]
         public decimal PreviousPrice { get; set; }
 
 
         // 较前交易日收盘价的差值
-        [SugarColumn(DecimalDigits = 3)]
+        [IgnoreDataMember]
         public decimal ChangeAmount { get; set; }
 
 
         // 较前交易日收盘价的变动百分比
-        [SugarColumn(DecimalDigits = 4)]
+        [IgnoreDataMember]
         public decimal ChangePercent { get; set; }
 
 
@@ -53,7 +54,7 @@ namespace peano.mystocks.entity
         public decimal Amount { get; set; }
 
 
-        // 更新时间
+        // 日期
         public DateTime UpdateTime { get; set; }
     }
 }
