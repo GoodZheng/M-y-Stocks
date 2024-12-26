@@ -6,15 +6,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using System.Windows.Input;
+using System.Windows;
+using peano.mystocks.log.library;
+using MyStocks.Commands;
 
 namespace MyStocks.ViewModels
 {
     public class MainViewModel : BindableBase
     {
         private ObservableCollection<Stock> stocks;
-        private readonly MainWindowConfig mainWindowConfig;
+        private MainWindowConfig mainWindowConfigs;
 
         private readonly DispatcherTimer timer;
+
+        public CloseWindowCommand CloseWindowCommand { get; }
+
 
         // 绑定到 View 的数据源
         public ObservableCollection<Stock> Stocks
@@ -23,20 +30,42 @@ namespace MyStocks.ViewModels
             set => SetProperty(ref stocks, value);  // 使用 SetProperty 来通知属性变化
         }
 
+        public MainWindowConfig MainWindowConfigs
+        {
+            get => mainWindowConfigs;
+            set => SetProperty(ref mainWindowConfigs, value);
+        }
+
         public MainViewModel()
         {
-            // 示例数据，通常你会从服务或数据库中获取
-            Stocks = new ObservableCollection<Stock>();
-            InitializeStocks();
+            // 初始化数据
+            stocks = GeAllStocks();
+
+            mainWindowConfigs = GetMainWindowConfigs();
+
+            CloseWindowCommand = new CloseWindowCommand();
+
+
+
 
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1); // 设置为每秒钟更新一次
             timer.Tick += Timer_Tick;
             timer.Start();
         }
-        private void InitializeStocks()
+
+        private MainWindowConfig GetMainWindowConfigs()
         {
-            Stocks.Add(new Stock
+            return new MainWindowConfig
+            {
+                Opacity = 1.0f
+            }; 
+        }
+
+        private ObservableCollection<Stock> GeAllStocks()
+        {
+            ObservableCollection<Stock> stocks = new ObservableCollection<Stock>();
+            stocks.Add(new Stock
             {
                 Code = "000001",
                 Name = "平安银行",
@@ -45,7 +74,7 @@ namespace MyStocks.ViewModels
                 LowPrice = 15.50m,
                 OpenPrice = 15.60m,
             });
-            Stocks.Add(new Stock
+            stocks.Add(new Stock
             {
                 Code = "000002",
                 Name = "万科A",
@@ -54,19 +83,11 @@ namespace MyStocks.ViewModels
                 LowPrice = 28.80m,
                 OpenPrice = 28.85m,
             });
+            return stocks;
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object? sender, EventArgs e)
         {
-            //Stocks.Add(new Stock
-            //{
-            //    Code = "000001",
-            //    Name = "平安银行",
-            //    CurrentPrice = 15.68m,
-            //    HighPrice = 16.00m,
-            //    LowPrice = 15.50m,
-            //    OpenPrice = 15.60m,
-            //});
             foreach (var stock in Stocks)
             {
                 stock.UpdateTime = DateTime.Now;

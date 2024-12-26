@@ -7,12 +7,14 @@
         mc:Ignorable="d"
         Title="摸鱼股票" Height="450" Width="800"
         WindowStyle="None"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        Opacity="{Binding ElementName=OpacitySlider,Path=Value}">
 
     <Border Background="#F2FFFFFF" 
            BorderBrush="#FF333333" 
            BorderThickness="1" 
-           CornerRadius="8">
+           CornerRadius="8"
+           MouseLeftButtonDown="Grid_MouseLeftButtonDown">
         <Grid Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -28,8 +30,8 @@
                 <!-- 透明度控制 Value="{Binding ElementName=5, Mode=TwoWay}" -->
                 <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
                     <TextBlock Text="透明度：" VerticalAlignment="Center"/>
-                    <Slider x:Name="OpacitySlider" Width="100" Minimum="0.1" Maximum="1" 
-                           />
+                    <Slider x:Name="OpacitySlider" Width="100" Minimum="0.6" Maximum="1"
+                            Value="{Binding MainWindowConfigs.Opacity, Mode=TwoWay}"/>
                 </StackPanel>
                 <!-- 右侧按钮 -->
                 <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
@@ -41,7 +43,9 @@
                     <Button x:Name="CloseButton" 
                            Content="✕" 
                            Width="30" 
-                           Height="30"/>
+                           Height="30"
+                           Command="{Binding CloseWindowCommand}" 
+                           CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}"/>
                 </StackPanel>
             </Grid>
             <!-- 股票数据表格 -->
