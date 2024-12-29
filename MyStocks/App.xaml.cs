@@ -1,4 +1,7 @@
-﻿using MyStocks.ViewModels;
+﻿using MyStocks.Services;
+using MyStocks.ViewModels;
+using MyStocks.Views;
+using peano.mystocks.config.library;
 using System.Configuration;
 using System.Data;
 using System.Windows;
@@ -27,9 +30,10 @@ namespace MyStocks
         {
             // containerRegistry.Register<ISomeService, SomeService>();
             // containerRegistry.Register<MainViewModel>(); //瞬时：每次请求都会创建一个新的实例
-
+            containerRegistry.Register<IConfigService, XmlConfigService>();
+            containerRegistry.Register<IStocksService,StocksService>();
             // 注册导航
-            containerRegistry.RegisterForNavigation<MainWindow,MainViewModel>(); 
+            containerRegistry.RegisterForNavigation<MainWindow,MainViewModel>();
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.IdentityModel.Logging;
+using MyStocks.Converters;
 using MyStocks.ViewModels;
 using NLog;
 using peano.mystocks.log.library;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyStocks
+namespace MyStocks.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,7 +24,7 @@ namespace MyStocks
         //private static readonly NLog.Logger logger = LogHelper.lo
         public MainWindow()
         {
-
+            TopmostToContentConverter s = new TopmostToContentConverter();
             InitializeComponent();
 
         }

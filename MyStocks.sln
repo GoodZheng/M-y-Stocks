@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStocks", "MyStocks\MyStoc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.log.library", "peano.mystocks.log.library\peano.mystocks.log.library.csproj", "{8245EADC-6CED-49A2-886A-8A7E36915082}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.config.library", "peano.mystocks.config.library\peano.mystocks.config.library.csproj", "{C7919552-5B43-4AFA-9F06-6170563D5655}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{8245EADC-6CED-49A2-886A-8A7E36915082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8245EADC-6CED-49A2-886A-8A7E36915082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8245EADC-6CED-49A2-886A-8A7E36915082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7919552-5B43-4AFA-9F06-6170563D5655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7919552-5B43-4AFA-9F06-6170563D5655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7919552-5B43-4AFA-9F06-6170563D5655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7919552-5B43-4AFA-9F06-6170563D5655}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +52,6 @@ Global
 		{C8361DB8-46B9-4EFF-A913-3027EFA4248B} = {CB724831-FFE5-4248-BAD7-9EBF16D0EF40}
 		{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF} = {6258A891-FF26-4F7B-AD12-870061292474}
 		{8245EADC-6CED-49A2-886A-8A7E36915082} = {CB724831-FFE5-4248-BAD7-9EBF16D0EF40}
+		{C7919552-5B43-4AFA-9F06-6170563D5655} = {CB724831-FFE5-4248-BAD7-9EBF16D0EF40}
 	EndGlobalSection
 EndGlobal
