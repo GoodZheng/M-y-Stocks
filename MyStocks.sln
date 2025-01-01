@@ -5,17 +5,23 @@ VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sf", "sf", "{CB724831-FFE5-4248-BAD7-9EBF16D0EF40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.entity.library", "peano.mystocks.entity\peano.mystocks.entity.library.csproj", "{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "peano.mystocks.entity.library", "peano.mystocks.entity\peano.mystocks.entity.library.csproj", "{896176E0-3BE5-4E86-9AC0-583DB8C4D5EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.dac.library", "peano.mystocks.dac.library\peano.mystocks.dac.library.csproj", "{C8361DB8-46B9-4EFF-A913-3027EFA4248B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "peano.mystocks.dac.library", "peano.mystocks.dac.library\peano.mystocks.dac.library.csproj", "{C8361DB8-46B9-4EFF-A913-3027EFA4248B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main", "Main", "{6258A891-FF26-4F7B-AD12-870061292474}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStocks", "MyStocks\MyStocks.csproj", "{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyStocks", "MyStocks\MyStocks.csproj", "{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.log.library", "peano.mystocks.log.library\peano.mystocks.log.library.csproj", "{8245EADC-6CED-49A2-886A-8A7E36915082}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "peano.mystocks.log.library", "peano.mystocks.log.library\peano.mystocks.log.library.csproj", "{8245EADC-6CED-49A2-886A-8A7E36915082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "peano.mystocks.config.library", "peano.mystocks.config.library\peano.mystocks.config.library.csproj", "{C7919552-5B43-4AFA-9F06-6170563D5655}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "peano.mystocks.config.library", "peano.mystocks.config.library\peano.mystocks.config.library.csproj", "{C7919552-5B43-4AFA-9F06-6170563D5655}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E240B9D4-F7B6-4B8B-A855-B970B50E6564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetStocksDataService", "GetStocksDataService\GetStocksDataService.csproj", "{858D4CDC-AF1F-4D2D-92CE-69B7371A5375}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TushareHttpService", "TushareHttpService\TushareHttpService.csproj", "{63D714B9-3D3D-4A5C-A2CC-152B755F31F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +49,14 @@ Global
 		{C7919552-5B43-4AFA-9F06-6170563D5655}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7919552-5B43-4AFA-9F06-6170563D5655}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7919552-5B43-4AFA-9F06-6170563D5655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{858D4CDC-AF1F-4D2D-92CE-69B7371A5375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858D4CDC-AF1F-4D2D-92CE-69B7371A5375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{858D4CDC-AF1F-4D2D-92CE-69B7371A5375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{858D4CDC-AF1F-4D2D-92CE-69B7371A5375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D714B9-3D3D-4A5C-A2CC-152B755F31F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D714B9-3D3D-4A5C-A2CC-152B755F31F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D714B9-3D3D-4A5C-A2CC-152B755F31F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D714B9-3D3D-4A5C-A2CC-152B755F31F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +67,10 @@ Global
 		{0F2A973F-38CF-4DD9-8C72-F787D4EA50FF} = {6258A891-FF26-4F7B-AD12-870061292474}
 		{8245EADC-6CED-49A2-886A-8A7E36915082} = {CB724831-FFE5-4248-BAD7-9EBF16D0EF40}
 		{C7919552-5B43-4AFA-9F06-6170563D5655} = {CB724831-FFE5-4248-BAD7-9EBF16D0EF40}
+		{858D4CDC-AF1F-4D2D-92CE-69B7371A5375} = {E240B9D4-F7B6-4B8B-A855-B970B50E6564}
+		{63D714B9-3D3D-4A5C-A2CC-152B755F31F8} = {E240B9D4-F7B6-4B8B-A855-B970B50E6564}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDD36629-BDC6-4228-9DF1-6DDDF47C34DA}
 	EndGlobalSection
 EndGlobal

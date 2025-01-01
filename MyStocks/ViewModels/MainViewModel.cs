@@ -24,7 +24,7 @@ namespace MyStocks.ViewModels
         private readonly DispatcherTimer timer;
         // 服务
         private readonly IConfigService _configService;
-        private readonly IStocksService _stocksService;
+        //private readonly IStocksService _stocksService;
         // 命令
         public CloseWindowCommand CloseWindowCommand { get; }
         public ToggleTopmostCommand ToggleTopmostCommand { get; }
@@ -98,11 +98,12 @@ namespace MyStocks.ViewModels
             }
         }
 
-        public MainViewModel(IConfigService configService, IStocksService stocksService)
+        // 构造函数
+        public MainViewModel(IConfigService configService)//, IStocksService stocksService)
         {
             // 拿到服务
             _configService = configService;
-            _stocksService = stocksService;
+            //_stocksService = stocksService;
 
             // 初始化数据
             stocks = GeAllStocks();
@@ -144,23 +145,27 @@ namespace MyStocks.ViewModels
             ObservableCollection<Stock> stocks = new ObservableCollection<Stock>();
             stocks.Add(new Stock
             {
-                Code = "000001",
+                TsCode = "000001.SZ",
+                Symbol = "000001",
                 Name = "平安银行",
-                CurrentPrice = 15.68m,
-                HighPrice = 16.00m,
-                LowPrice = 15.50m,
-                OpenPrice = 15.60m,
-                PreviousPrice = 14.44m
+                Area = "深圳",
+                Industry = "银行",
+                FullName = "平安银行股份有限公司",
+                EnName = "Ping An Bank Co., Ltd.",
+                ListDate = new DateTime(1991, 4, 3),
+                Market = "主板"
             });
             stocks.Add(new Stock
             {
-                Code = "000002",
-                Name = "万科A",
-                CurrentPrice = 28.90m,
-                HighPrice = 29.00m,
-                LowPrice = 28.80m,
-                OpenPrice = 28.85m,
-                PreviousPrice = 24.99m
+                TsCode = "000002.SZ",
+                Symbol = "000001",
+                Name = "平安银行",
+                Area = "深圳",
+                Industry = "银行",
+                FullName = "平安银行股份有限公司",
+                EnName = "Ping An Bank Co., Ltd.",
+                ListDate = new DateTime(1991, 4, 3),
+                Market = "主板"
             });
             return stocks;
         }
@@ -172,13 +177,13 @@ namespace MyStocks.ViewModels
                 // 在这里实现提交股票代码的逻辑
                 if (!string.IsNullOrEmpty(addingStockCode))
                 {
-                    // 执行查询或其他操作
-                    if (await _stocksService.CheckStockCodeExistsAsync(addingStockCode))
-                    {
-                        mainWindowConfigs.StockCodes.Add(addingStockCode);
-                        _configService.Save(mainWindowConfigs);
-                        LogService.Info($"添加股票代码 {addingStockCode} 成功");
-                    }
+                    //// 执行查询或其他操作
+                    //if (await _stocksService.CheckStockCodeExistsAsync(addingStockCode))
+                    //{
+                    //    mainWindowConfigs.StockCodes.Add(addingStockCode);
+                    //    _configService.Save(mainWindowConfigs);
+                    //    LogService.Info($"添加股票代码 {addingStockCode} 成功");
+                    //}
                 }
             }
             catch (Exception ex)

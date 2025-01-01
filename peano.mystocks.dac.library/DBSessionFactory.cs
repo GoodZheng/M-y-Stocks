@@ -12,7 +12,7 @@ namespace peano.mystocks.dac.library
     {
         private static ConcurrentBag<DBConfig> dBConfigs = new ConcurrentBag<DBConfig>();
 
-        public static IDBSession CreateDBSession(DBCode dBCode)
+        public static IDBSession GetDBSession(DBCode dBCode)
         {
             DBInfo? dbInfo = null;
             if (!dBConfigs.Any(d => d.DBCode == dBCode))

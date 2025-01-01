@@ -92,14 +92,14 @@
                      CanUserSortColumns="False"
                      ItemsSource="{Binding Stocks}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="代码" Binding="{Binding Code}" Width="Auto"/>
-                    <DataGridTextColumn Header="名称" Binding="{Binding Name}" Width="Auto"/>
+                    <DataGridTextColumn Header="代码" Binding="{Binding TsCode}" Width="Auto"/>
+                    <!--<DataGridTextColumn Header="名称" Binding="{Binding Name}" Width="Auto"/>
                     <DataGridTextColumn Header="涨跌幅" Binding="{Binding ChangePercent, StringFormat={}{0:P2}}" Width="Auto"/>
                     <DataGridTextColumn Header="当前价" Binding="{Binding CurrentPrice, StringFormat={}{0:F2}}" Width="Auto"/>
                     <DataGridTextColumn Header="最高" Binding="{Binding HighPrice, StringFormat={}{0:F2}}" Width="Auto"/>
                     <DataGridTextColumn Header="最低" Binding="{Binding LowPrice, StringFormat={}{0:F2}}" Width="Auto"/>
                     <DataGridTextColumn Header="开盘" Binding="{Binding OpenPrice, StringFormat={}{0:F2}}" Width="Auto"/>
-                    <DataGridTextColumn Header="昨日收盘" Binding="{Binding PreviousPrice, StringFormat={}{0:F2}}" Width="Auto"/>
+                    <DataGridTextColumn Header="昨日收盘" Binding="{Binding PreviousPrice, StringFormat={}{0:F2}}" Width="Auto"/>-->
                 </DataGrid.Columns>
             </DataGrid>
             <!-- 添加状态栏 -->

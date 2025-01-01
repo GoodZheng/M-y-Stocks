@@ -2,6 +2,8 @@
 using MyStocks.Converters;
 using MyStocks.ViewModels;
 using NLog;
+using peano.mystocks.dac.library;
+using peano.mystocks.entity.library;
 using peano.mystocks.log.library;
 using System.Text;
 using System.Windows;
@@ -25,6 +27,9 @@ namespace MyStocks.Views
         public MainWindow()
         {
             TopmostToContentConverter s = new TopmostToContentConverter();
+            
+
+
             InitializeComponent();
 
         }

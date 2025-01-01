@@ -1,5 +1,6 @@
 ﻿using peano.mystocks.entity.library;
 using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -25,9 +26,19 @@ namespace peano.mystocks.dac.library
                 }
             });
         }
-        public async Task<List<Stock>> GetStocksAsync()
+        //public async Task<List<Stock>> GetStocksAsync()
+        //{
+        //    return await Db.Queryable<Stock>().ToListAsync();
+        //}
+
+        public  void InitTables<T>()
         {
-            return await Db.Queryable<Stock>().ToListAsync();
+            Db.CodeFirst.InitTables<T>();
+        }
+
+        public async Task<List<T>> GetTableListAsync<T>()
+        {
+            return await Db.Queryable<T>().ToListAsync();
         }
     }
 }

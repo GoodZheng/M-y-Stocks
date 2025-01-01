@@ -45,13 +45,14 @@ namespace peano.mystocks.dac.library
             }
         }
 
-        public enum DBSystemType
-        {
-            sqlserver,  //sqlserver数据库
-            postgresql,   //pgSQL数据库
-            access,       //access数据库
-            oracle,       //oracle数据库
-            mysql        //mysql数据库
-        }
+        
+    }
+    public enum DBSystemType
+    {
+        sqlserver,  //sqlserver数据库
+        postgresql,   //pgSQL数据库
+        access,       //access数据库
+        oracle,       //oracle数据库
+        mysql        //mysql数据库
     }
 }
